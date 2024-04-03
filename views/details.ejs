@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyTV</title>
+    <!-- local css file in public directory -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+    <main>
+      <h1><%= singledata.showname %></h1>
+      <img src="<%= singledata.imgpath %>" width="210px" />
+      <h4>Description</h4>
+      <p><%= singledata.descript %></p>
+      <p>posted by: <%= singledata.user_id %></p>
+
+      <h4>Actors</h4>
+      <ul>
+        <% singledata.actors.forEach(actor => { %>
+        <li><%= actor %></li>
+        <% }); %>
+      </ul>
+    </main>
+  </body>
+</html>
